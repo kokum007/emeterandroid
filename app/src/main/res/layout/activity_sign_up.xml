@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp">
+
+    <EditText
+        android:id="@+id/editText8"
+        android:layout_width="283dp"
+        android:layout_height="71dp"
+        android:ems="10"
+        android:hint="Account Number"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="197dp" />
+
+    <EditText
+        android:id="@+id/editText9"
+        android:layout_width="283dp"
+        android:layout_height="63dp"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="305dp" />
+
+    <EditText
+        android:id="@+id/editText10"
+        android:layout_width="271dp"
+        android:layout_height="70dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="406dp" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="173dp"
+        android:layout_height="78dp"
+        android:text="Sign Up"
+        tools:layout_editor_absoluteX="119dp"
+        tools:layout_editor_absoluteY="545dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
