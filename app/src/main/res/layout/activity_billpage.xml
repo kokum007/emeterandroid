@@ -18,4 +18,12 @@
         tools:layout_editor_absoluteX="89dp"
         tools:layout_editor_absoluteY="397dp" />
 
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="495dp"
+        android:background="?android:attr/listDivider" />
+
 </RelativeLayout>

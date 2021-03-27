@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "284060218165",
+    "firebase_url": "https://emeter-ce70f-default-rtdb.firebaseio.com",
+    "project_id": "emeter-ce70f",
+    "storage_bucket": "emeter-ce70f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:284060218165:android:d5ef89f05d462fd6aa927c",
+        "android_client_info": {
+          "package_name": "com.example.emeter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "284060218165-spplt1tmloee7sh25lrfouu60066abpf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.emeter",
+            "certificate_hash": "e9b8d9d7802682f707b24672e727d0536f5c4672"
+          }
+        },
+        {
+          "client_id": "284060218165-h47r7lhbdd5eg7q6rce5ovp5c63lunqk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsBDUVKCCmL77pm9e6awsmsP-usqyO4uQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "284060218165-h47r7lhbdd5eg7q6rce5ovp5c63lunqk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
