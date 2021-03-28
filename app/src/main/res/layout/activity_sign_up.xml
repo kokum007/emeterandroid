@@ -7,40 +7,67 @@
     tools:context=".SignUp">
 
     <EditText
-        android:id="@+id/editText8"
+        android:id="@+id/regAccNumber"
         android:layout_width="283dp"
         android:layout_height="71dp"
+        android:layout_marginTop="116dp"
         android:ems="10"
         android:hint="Account Number"
         android:inputType="number"
-        tools:layout_editor_absoluteX="64dp"
-        tools:layout_editor_absoluteY="197dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText9"
+        android:id="@+id/regEmail"
         android:layout_width="283dp"
         android:layout_height="63dp"
+        android:layout_marginTop="32dp"
         android:ems="10"
         android:hint="E-mail"
         android:inputType="textEmailAddress"
-        tools:layout_editor_absoluteX="66dp"
-        tools:layout_editor_absoluteY="305dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regAccNumber" />
 
     <EditText
-        android:id="@+id/editText10"
-        android:layout_width="271dp"
-        android:layout_height="70dp"
+        android:id="@+id/regPassword"
+        android:layout_width="280dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="28dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
-        tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="406dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regEmail" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/buttonRegister"
         android:layout_width="173dp"
         android:layout_height="78dp"
-        android:text="Sign Up"
-        tools:layout_editor_absoluteX="119dp"
-        tools:layout_editor_absoluteY="545dp" />
+        android:layout_marginTop="80dp"
+        android:backgroundTint="#5E35B1"
+        android:text="Register"
+        android:textColor="#FAF9F9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regPassword"
+        app:layout_constraintVertical_bias="0.476" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="54dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regPassword" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

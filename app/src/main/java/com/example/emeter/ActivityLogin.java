@@ -21,6 +21,14 @@ public class ActivityLogin extends AppCompatActivity {
                 startActivity(new Intent(ActivityLogin.this,Home.class));
             }
         });
+
+        Button btn2 = (Button)findViewById(R.id.register);
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ActivityLogin.this,SignUp.class));
+            }
+        });
         }
     }
 

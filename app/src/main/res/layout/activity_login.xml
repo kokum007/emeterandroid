@@ -21,11 +21,11 @@
         app:layout_constraintTop_toBottomOf="@+id/editText4" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/register"
         android:layout_width="126dp"
         android:layout_height="62dp"
         android:backgroundTint="#5E35B1"
-        android:text="SignUp"
+        android:text="Register"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
