@@ -21,6 +21,14 @@ public class Home extends AppCompatActivity {
                 startActivity(new Intent(Home.this,GraphView.class));
             }
         });
+
+        Button btn3 = (Button) findViewById(R.id.buttonBill);
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Home.this,Bill.class));
+            }
+        });
     }
     }
 

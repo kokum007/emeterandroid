@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -62,6 +63,37 @@ public class SignUp extends AppCompatActivity {
                 final String password = regPassword.getText().toString().trim();
 
                 //add validation here
+                if(email.isEmpty()){
+                    regEmail.setError("E-mail is required");
+                    regEmail.requestFocus();
+                    return;
+                }
+                if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+                    regEmail.setError("please provide valid email");
+                    regEmail.requestFocus();
+                    return;
+                }
+
+                if(accNumber.isEmpty()){
+                    regAccNumber.setError("Please type your Account Number");
+                    regAccNumber.requestFocus();
+                    return;
+                }
+                if (accNumber.length()<8){
+                    regAccNumber.setError("Account number have 8 numbers");
+                    regAccNumber.requestFocus();
+                    return;
+                }
+
+                if (password.isEmpty()){
+                    regPassword.setError("Type a password");
+                }
+                if (password.length()<6){
+                    regPassword.setError("Minimum 6 letters required");
+                    regPassword.requestFocus();
+                    return;
+
+                }
 
 
                 progressBar.setVisibility(View.VISIBLE);
@@ -91,7 +123,7 @@ public class SignUp extends AppCompatActivity {
                                     });
                                 }else{
                                         Toast.makeText(SignUp.this, "Failed to connect", Toast.LENGTH_SHORT).show();
-                                        progressBar.setVisibility(View.GONE);
+                                        //progressBar.setVisibility(View.GONE);
                                 }
                             }
                         });
