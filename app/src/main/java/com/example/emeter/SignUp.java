@@ -61,6 +61,7 @@ public class SignUp extends AppCompatActivity {
                 final String email = regEmail.getText().toString().trim();
                 final String accNumber = regAccNumber.getText().toString().trim();
                 final String password = regPassword.getText().toString().trim();
+                final  String meterReading = "0";
 
                 //add validation here
                 if(email.isEmpty()){
@@ -102,7 +103,8 @@ public class SignUp extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()){
-                                    User user = new User(accNumber, email, password);
+                                    String meterReading = "0";
+                                    User user = new User(accNumber, email, meterReading);
 
                                     FirebaseDatabase.getInstance().getReference("Users")
                                             .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
@@ -123,7 +125,7 @@ public class SignUp extends AppCompatActivity {
                                     });
                                 }else{
                                         Toast.makeText(SignUp.this, "Failed to connect", Toast.LENGTH_SHORT).show();
-                                        //progressBar.setVisibility(View.GONE);
+                                        progressBar.setVisibility(View.GONE);
                                 }
                             }
                         });
