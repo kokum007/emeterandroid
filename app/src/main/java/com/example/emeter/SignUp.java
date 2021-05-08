@@ -103,11 +103,12 @@ public class SignUp extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()){
-                                    String meterReading = "0";
-                                    User user = new User(accNumber, email, meterReading);
+                                    int meterReading = 0 ;
+                                    boolean power = true ;
+                                    User user = new User(accNumber, email, meterReading, power);
 
                                     FirebaseDatabase.getInstance().getReference("Users")
-                                            .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                            .child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("details")
                                             .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
@@ -123,10 +124,11 @@ public class SignUp extends AppCompatActivity {
                                             }
                                         }
                                     });
-                                }else{
-                                        Toast.makeText(SignUp.this, "Failed to connect", Toast.LENGTH_SHORT).show();
-                                        progressBar.setVisibility(View.GONE);
                                 }
+                                //else{
+////                                        Toast.makeText(SignUp.this, "Failed to connect", Toast.LENGTH_SHORT).show();
+////                                        progressBar.setVisibility(View.GONE);
+////                                }
                             }
                         });
 

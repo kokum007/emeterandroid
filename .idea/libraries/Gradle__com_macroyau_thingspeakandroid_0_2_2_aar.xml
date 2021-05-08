@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.macroyau:thingspeakandroid:0.2.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6d3a0b3d5d140451b6971e1974535938/jetified-thingspeakandroid-0.2.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6d3a0b3d5d140451b6971e1974535938/jetified-thingspeakandroid-0.2.2/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.macroyau/thingspeakandroid/0.2.2/30dac379a9c1a74f932a0fb5863bfe902e2b2ea8/thingspeakandroid-0.2.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.macroyau/thingspeakandroid/0.2.2/457a12fe56c3e0e4233463d3a1f085ab19343ba7/thingspeakandroid-0.2.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
