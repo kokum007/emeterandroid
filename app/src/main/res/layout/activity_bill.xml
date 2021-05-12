@@ -4,7 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#232F34"
     tools:context=".Bill">
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="129dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="88dp"
+        android:background="#F9AA33"
+        android:text="Pay Bill"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <TextView
         android:id="@+id/meter_value"
@@ -14,13 +26,23 @@
         android:layout_centerVertical="true"
         android:layout_marginTop="40dp"
         android:paddingTop="16dp"
-        android:textColor="#fa7ba5"
+        android:textColor="#FFFFFF"
         android:textSize="33sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.474"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="293dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="72dp"
+        android:background="#F9AA33"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/textView2"
@@ -30,22 +52,12 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
         android:text="Meter Reading (KWh)"
-        android:textColor="#6F6F6F"
+        android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/meter_value" />
-
-    <View
-        android:id="@+id/view"
-        android:layout_width="293dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="72dp"
-        android:background="#00BCD4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/textKwh"
@@ -53,6 +65,7 @@
         android:layout_height="25dp"
         android:layout_marginTop="40dp"
         android:text="KWH Charge"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/view"
         app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="@+id/view"
@@ -64,6 +77,7 @@
         android:layout_height="29dp"
         android:layout_marginTop="24dp"
         android:text="Fix Charge"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/view"
         app:layout_constraintHorizontal_bias="0.198"
         app:layout_constraintStart_toStartOf="@+id/view"
@@ -75,6 +89,7 @@
         android:layout_height="27dp"
         android:layout_marginTop="16dp"
         android:text="Tax Amount"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/view"
         app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="@+id/view"
@@ -86,36 +101,17 @@
         android:layout_height="28dp"
         android:layout_marginTop="24dp"
         android:text="Total"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/view"
         app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="@+id/view"
         app:layout_constraintTop_toBottomOf="@+id/textTax" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="130dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="76dp"
-        android:layout_marginBottom="16dp"
-        android:text="Calculate Bill"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="129dp"
-        android:layout_height="63dp"
-        android:layout_marginEnd="56dp"
-        android:text="Pay Bill"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/button4" />
-
     <TextView
         android:id="@+id/textViewKwh"
         android:layout_width="89dp"
         android:layout_height="25dp"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/view"
         app:layout_constraintHorizontal_bias="0.346"
         app:layout_constraintStart_toEndOf="@+id/textKwh"
@@ -125,6 +121,7 @@
         android:id="@+id/textViewFix"
         android:layout_width="89dp"
         android:layout_height="23dp"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/view"
         app:layout_constraintHorizontal_bias="0.363"
         app:layout_constraintStart_toEndOf="@+id/textFix"
@@ -134,6 +131,7 @@
         android:id="@+id/textViewTax"
         android:layout_width="84dp"
         android:layout_height="23dp"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/view"
         app:layout_constraintHorizontal_bias="0.316"
         app:layout_constraintStart_toEndOf="@+id/textTax"
@@ -143,6 +141,7 @@
         android:id="@+id/textViewTotal"
         android:layout_width="88dp"
         android:layout_height="22dp"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/view"
         app:layout_constraintHorizontal_bias="0.342"
         app:layout_constraintStart_toEndOf="@+id/textTotal"
