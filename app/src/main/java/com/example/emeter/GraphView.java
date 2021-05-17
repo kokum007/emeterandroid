@@ -50,6 +50,8 @@ public class GraphView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_graphview);
 
+
+
         // Create a Calendar object dated 5 minutes ago
         Calendar calendar = Calendar.getInstance();
         calendar.add(Calendar.MINUTE, -5);

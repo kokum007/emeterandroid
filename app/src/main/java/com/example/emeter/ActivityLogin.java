@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -21,7 +23,8 @@ public class ActivityLogin extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private ProgressBar progressBar;
-    private EditText loginName,loginPassword;
+    //private EditText loginName,loginPassword;
+    private TextInputLayout loginName, loginPassword;
     private Button login;
 
 
@@ -31,10 +34,12 @@ public class ActivityLogin extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_login);
 
-        loginName = (EditText) findViewById(R.id.loginName);
-        loginPassword = (EditText) findViewById(R.id.loginPassword);
+        loginName = findViewById(R.id.loginName);
+        loginPassword = findViewById(R.id.loginPassword);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
         mAuth = FirebaseAuth.getInstance();
@@ -57,8 +62,8 @@ public class ActivityLogin extends AppCompatActivity {
 
             private void login() {
 
-                String username = loginName.getText().toString().trim();
-                String password =  loginPassword.getText().toString().trim();
+                String username = loginName.getEditText().getText().toString().trim();
+                String password =  loginPassword.getEditText().getText().toString().trim();
 
                 if(username.isEmpty()){
                     loginName.setError("E-mail is required");

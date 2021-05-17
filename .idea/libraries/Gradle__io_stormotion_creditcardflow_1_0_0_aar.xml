@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: io.stormotion:creditcardflow:1.0.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dc6cd989cef075044f199b0fbd3e74f4/jetified-creditcardflow-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dc6cd989cef075044f199b0fbd3e74f4/jetified-creditcardflow-1.0.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.stormotion/creditcardflow/1.0.0/3464060e16db973fc79ad8b535ff52afdb60dd27/creditcardflow-1.0.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.stormotion/creditcardflow/1.0.0/aff3f8a9a65255c3c151c361526e82ee1c0302a0/creditcardflow-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,89 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E0E0E0"
-    tools:context=".ActivityLogin">
-
-    <Button
-        android:id="@+id/login"
-        android:layout_width="123dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#41C300"
-        android:text="LogIn"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.451"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginPassword" />
-
-    <Button
-        android:id="@+id/register"
-        android:layout_width="126dp"
-        android:layout_height="62dp"
-        android:backgroundTint="#5E35B1"
-        android:text="Register"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.456"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login"
-        app:layout_constraintVertical_bias="0.619" />
-
-    <EditText
-        android:id="@+id/loginName"
-        android:layout_width="269dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="64dp"
-        android:ems="10"
-        android:hint="Type your E-mail"
-        android:inputType="textPersonName"
-        android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginImg" />
-
-    <EditText
-        android:id="@+id/loginPassword"
-        android:layout_width="274dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="Type your password here"
-        android:inputType="textPassword"
-        android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginName" />
+    android:background="#FFFBE6"
+    tools:context=".ActivityLogin"
+    android:orientation="vertical"
+    android:padding="20dp">
 
     <ImageView
-        android:id="@+id/loginImg"
-        android:layout_width="262dp"
-        android:layout_height="241dp"
-        android:layout_marginTop="68dp"
-        android:background="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/emeterlogo" />
+        android:id="@+id/logoImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
+
+        android:src="@drawable/emeterlogo" />
+
+    <TextView
+        android:id="@+id/logoText"
         android:layout_width="wrap_content"
-        android:visibility="gone"
-
         android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginImg" />
+        android:fontFamily="@font/bungee"
+        android:text="Hello there, Welcome Back"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textColorHint="#FFFFFF"
+        android:textSize="40sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/Slogan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/antic"
+        android:text="Sign In to Continue"
+        android:textSize="24sp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+    
+         <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/loginName"
+        android:hint="Type your E-mail here"
+        app:startIconDrawable="@drawable/ic_person_black_24dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+         <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/loginPassword"
+        android:hint="Type you Password"
+        app:passwordToggleEnabled="true"
+        app:startIconDrawable="@drawable/ic_lock_black_24dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="#00000000"
+            android:elevation="0dp"
+            android:layout_margin="5dp" />
+
+
+
+        <Button
+            android:id="@+id/login"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LogIn"
+            android:layout_marginTop="20dp"
+            android:textColor="#fff"
+            android:background="#41C300"
+            android:layout_marginBottom="5dp" />
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_margin="5dp"
+            android:background="#00000000"
+            android:elevation="0dp"
+            android:fontFamily="@font/antic"
+            android:text="New User? Sign UP"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

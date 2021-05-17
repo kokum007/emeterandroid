@@ -7,6 +7,71 @@
     android:background="#232F34"
     tools:context=".Home">
 
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="234dp"
+
+
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="113dp"
+        android:background="#232F34"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.414"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="30dp"
+            android:layout_height="165dp"
+            android:layout_margin="15dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="50dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/meter_warning"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/meter_logo"
+                    />
+
+                <TextView
+                    android:id="@+id/meter_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="16dp"
+                    android:textColor="#fa7ba5"
+                    android:textSize="33sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="Meter Reading (KWh)"
+                    android:textColor="#6F6F6F"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.gridlayout.widget.GridLayout>
+
+
+
     <Button
         android:id="@+id/buttonBill"
         android:layout_width="100dp"
@@ -74,67 +139,5 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintVertical_bias="0.112" />
-
-    <androidx.gridlayout.widget.GridLayout
-        android:id="@+id/gridLayout"
-        android:layout_width="match_parent"
-        android:layout_height="234dp"
-
-
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="113dp"
-        android:background="#232F34"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.414"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="30dp"
-            android:layout_height="165dp"
-            android:layout_margin="15dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="20dp"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="50dp"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="15dp">
-
-                <ImageView
-                    android:id="@+id/meter_warning"
-                    android:layout_width="18dp"
-                    android:layout_height="18dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="3dp" />
-
-                <TextView
-                    android:id="@+id/meter_value"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:paddingTop="16dp"
-                    android:textColor="#fa7ba5"
-                    android:textSize="33sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:text="Meter Reading (KWh)"
-                    android:textColor="#6F6F6F"
-                    android:textSize="18sp" />
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
-    </androidx.gridlayout.widget.GridLayout>
 
 </RelativeLayout>
