@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#232F34"
-    tools:context=".Home">
+    tools:context=".Home"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridLayout"
         android:layout_width="match_parent"
         android:layout_height="234dp"
+
 
 
         android:layout_alignParentEnd="true"
@@ -63,81 +69,196 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
-                    android:text="Meter Reading (KWh)"
+                    android:text="Meter Reading (kWh)"
                     android:textColor="#6F6F6F"
                     android:textSize="18sp" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
     </androidx.gridlayout.widget.GridLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="#232F34"
+        android:id="@+id/card_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#232F34"
+            android:gravity="center"
+            android:layout_margin="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview_Power"
+                android:layout_width="350dp"
+                android:layout_height="200dp"
+                app:cardElevation="50dp"
+                app:cardBackgroundColor="#ff0006"
+                app:cardCornerRadius="50dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:paddingTop="10dp"
+                        android:layout_width="100dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/meter_logo"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hello User,"
+                        android:fontFamily="@font/antic"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#fff"/>
+                    <TextView
+                        android:id="@+id/power_Label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:layout_marginTop="3dp"
+                        android:text="Wait"
+                        android:textSize="24dp"
+                        android:textColor="#fff"
+                        android:fontFamily="sans-serif-black"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
 
 
 
-    <Button
-        android:id="@+id/buttonBill"
-        android:layout_width="100dp"
-        android:layout_height="71dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="26dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="95dp"
-        android:layout_toStartOf="@+id/buttonmeter"
-        android:background="#F9AA33"
-        android:text="Bill"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.786" />
+        </LinearLayout>
 
-    <Button
-        android:id="@+id/buttonmeter"
-        android:layout_width="100dp"
-        android:layout_height="71dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="95dp"
-        android:layout_toStartOf="@+id/button5"
-        android:background="#F9AA33"
-        android:text="History"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button5"
-        app:layout_constraintHorizontal_bias="0.447"
-        app:layout_constraintStart_toEndOf="@+id/buttonBill"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.786" />
+    </RelativeLayout>
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="100dp"
-        android:layout_height="71dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="26dp"
-        android:layout_marginBottom="95dp"
-        android:background="#F9AA33"
-        android:text="Contact"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.786" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
 
-    <ToggleButton
-        android:id="@+id/toggleButton"
-        android:layout_width="160dp"
-        android:layout_height="54dp"
-        android:layout_above="@+id/buttonmeter"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="125dp"
-        android:layout_marginEnd="126dp"
-        android:layout_marginBottom="200dp"
-        android:background="#F9AA33"
-        android:text="ToggleButton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.112" />
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="#FFFBE6"
+                android:elevation="8dp"
+                android:layout_margin="8dp">
 
-</RelativeLayout>
+                <ImageButton
+                    android:id="@+id/buttonBill"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:backgroundTint="#FFFBE6"
+                    android:src="@drawable/bill_icon"
+                    android:scaleType="fitCenter"/>
+
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bill"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center_horizontal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="#FFFBE6"
+                android:elevation="8dp"
+                android:layout_margin="8dp">
+
+                <ImageButton
+                    android:id="@+id/buttonmeter"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:backgroundTint="#FFFBE6"
+                    android:src="@drawable/graph_view"
+                    android:scaleType="fitCenter"/>
+
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Usage Graph"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center_horizontal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="#FFFBE6"
+                android:elevation="8dp"
+                android:layout_margin="8dp">
+
+                <ImageButton
+                    android:id="@+id/button5"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="#FFFBE6"
+
+                    android:src="@drawable/ic_mail_black_24dp"
+                    android:scaleType="fitCenter"/>
+
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contact"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center_horizontal" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>
